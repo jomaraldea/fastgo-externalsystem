@@ -35,6 +35,9 @@ attributes.headers.transactionId]]></ee:set-variable>
 				<logger level="INFO" doc:name="Logger" doc:id="3aa85933-0d1a-468a-96ca-f949fda85db4"/>
 				<flow-ref doc:name="Flow Reference" doc:id="24b073f9-e802-46b9-b50a-8d4ba4617168" name="FastGo-GetSchedules-ImplementationSub_Flow"/>
 			</when>
+			<otherwise >
+				<logger level="INFO" doc:name="Logger" doc:id="b72228a1-a77d-41ba-8e7e-0ee0bfdfe48e" message="Error on URI parameter occured. Invalid serviceType for #[vars.transactionId]"/>
+			</otherwise>
 		</choice>
 		<logger level="INFO" doc:name="Logger" doc:id="d5872ea4-9a50-493e-a1bf-fd84589589bb" message="Response sent for FastGo External System for transactionId #[vars.transactionId]"/>
 		<error-handler >
