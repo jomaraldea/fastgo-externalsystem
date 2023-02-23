@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<db:select doc:name="Select" doc:id="405524b2-874e-4eb3-acfa-5ed15ba9382a" config-ref="Database_Config">
 			<db:sql ><![CDATA[SELECT *
 FROM routes
-WHERE companyname = "FastGo"]]></db:sql>
+WHERE companyName = "FastGo"]]></db:sql>
 		</db:select>
 		<ee:transform doc:name="Transform Message" doc:id="7733f2f5-e303-42e0-a58b-6e5c4aa9f91c" >
 			<ee:message >
